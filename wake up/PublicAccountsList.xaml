@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="wake_up.PublicAccountsList">
+
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Label Text="List OF Public Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
+
+            <CollectionView x:Name="AccountList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                <Label/>
+                                <Label Text="{Binding Email}" FontSize="Small" TextColor="Gray" />
+                                <Label/>
+                                <Label Text="{Binding Password}" FontSize="Small" TextColor="Gray" />
+                                <Label Text=""/>
+                                <Label/>
+                            </StackLayout>
+
+                            <Button Text="Delete" 
+                                    TextColor="White" 
+                                    Clicked="OnDeleteClicked" 
+                                    CommandParameter="{Binding .}" BackgroundColor="#736B6B" FontSize="Body" MaximumHeightRequest="50" MaximumWidthRequest="70" MinimumHeightRequest="50" MinimumWidthRequest="70" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

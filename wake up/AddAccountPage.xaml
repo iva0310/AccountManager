@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="wake_up.AddAccountPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="10" HorizontalOptions="Fill">
+            <Label
+            Text=""
+            />
+
+            <Label
+                Text="Public Account" FontSize="Medium" HorizontalOptions="Start" />
+
+            <Button
+                Clicked="AddPublicAcc"
+                Text="Add public" HorizontalOptions="Start" />
+
+            <Label
+                Text="Private Account" FontSize="Medium" HorizontalOptions="Start" /> 
+
+            <Button
+                Clicked="AddPrivateAcc"
+                Text="Add private" HorizontalOptions="Start" />
+            <Entry
+                x:Name="EnterName"
+                Text=""
+                HorizontalOptions="CenterAndExpand" Placeholder="Enter your Name"/>
+            <Entry
+                x:Name="EnterEmail"
+                Text="@gmail.com / @outlook.com"
+                HorizontalOptions="CenterAndExpand" Placeholder="Enter your mail"/>
+            <Entry
+                x:Name="EnterPass"
+                Text=""
+                HorizontalOptions="CenterAndExpand" Placeholder="Enter your password"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
