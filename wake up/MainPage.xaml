@@ -10,6 +10,7 @@
             <Label/>
             <Label/>
             <Image
+                x:Name="MainPageImage"
                 Source="kawi.gif"
                 IsAnimationPlaying="True"
                 HeightRequest="185"
@@ -58,12 +59,14 @@
             </Button>
             <Grid>
                 <ImageButton
-                    Source="setting.jpg" WidthRequest="10"
+                    Source="setting.jpg" 
+                    WidthRequest="10"
                     HeightRequest="10"
                     Margin="25" 
                     HorizontalOptions="End"
                     VerticalOptions="End" BackgroundColor="#00000000"
                     ToolTipProperties.Text="Setting"
+                    Clicked="SettingClicked"
                 />
             </Grid>
 
