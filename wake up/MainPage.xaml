@@ -10,7 +10,8 @@
             <Label/>
             <Label/>
             <Image
-                Source="car.jpg"
+                Source="kawi.gif"
+                IsAnimationPlaying="True"
                 HeightRequest="185"
                 Aspect="AspectFit"/>
 
@@ -22,14 +23,53 @@
             <Button
                 Text="Add an Account" 
                 Clicked="AddAccountButtonClicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center">
+
+                <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="PointerOver">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Pink" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+            </Button>
 
             <Button
                 Text="Account Manager"
                 Clicked="PublicOrPrivateClicked"
-                HorizontalOptions="Center" FontSize="Medium"/>
+                HorizontalOptions="Center" FontSize="Medium">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="PointerOver">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="Pink" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+            </Button>
+            <Grid>
+                <ImageButton
+                    Source="setting.jpg" WidthRequest="10"
+                    HeightRequest="10"
+                    Margin="25" 
+                    HorizontalOptions="End"
+                    VerticalOptions="End" BackgroundColor="#00000000"
+                    ToolTipProperties.Text="Setting"
+                />
+            </Grid>
 
-            
+
+
+
         </VerticalStackLayout>
     </ScrollView>
 

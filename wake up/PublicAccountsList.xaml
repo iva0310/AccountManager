@@ -5,7 +5,7 @@
 
     <ScrollView>
         <StackLayout Padding="20">
-            <Label Text="List OF Public Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
+            <Label Text="List Of Public Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
 
             <CollectionView x:Name="AccountList">
                 <CollectionView.ItemTemplate>
@@ -24,7 +24,12 @@
                             <Button Text="Delete" 
                                     TextColor="White" 
                                     Clicked="OnDeleteClicked" 
-                                    CommandParameter="{Binding .}" BackgroundColor="#736B6B" FontSize="Body" MaximumHeightRequest="50" MaximumWidthRequest="70" MinimumHeightRequest="50" MinimumWidthRequest="70" />
+                                    CommandParameter="{Binding .}" 
+                                    BackgroundColor="#736B6B" FontSize="Body" 
+                                    MaximumHeightRequest="50" MaximumWidthRequest="70"
+                                    MinimumHeightRequest="50" MinimumWidthRequest="70">
+
+                            </Button>
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

@@ -11,9 +11,11 @@
             </Style>
 
             <Style TargetType="Button">
-                <Setter Property="BackgroundColor" Value="DarkSlateGrey" />
+                <Setter Property="BackgroundColor" Value="PaleVioletRed" />
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontFamily" Value="Pixelletters" />
+                <Setter Property="BorderColor" Value="White" />
+                
             </Style>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />

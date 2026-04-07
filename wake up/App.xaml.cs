@@ -2,6 +2,7 @@
 {
     public partial class App : Application
     {
+        [Obsolete]
         public App()
         {
             InitializeComponent();
@@ -12,16 +13,12 @@
         {
             var window = base.CreateWindow(activationState);
 
-            if (window != null)
-            {
-                window.Width = 500;
-                window.Height = 500;
-
-                window.MinimumWidth = 500;
-                window.MaximumWidth = 500;
-                window.MinimumHeight = 500;
-                window.MaximumHeight = 500;
-            }
+            window.Width = 500;
+            window.Height = 500;
+            window.MinimumWidth = 500;
+            window.MaximumWidth = 500;
+            window.MinimumHeight = 500;
+            window.MaximumHeight = 500;
 
             return window;
         }

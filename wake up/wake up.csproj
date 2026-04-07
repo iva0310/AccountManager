@@ -55,8 +55,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\app.png" ForegroundFile="Resources\AppIcon\app.png" Color="#512BD4" />
-
+		<MauiIcon Include="Resources\AppIcon\catt.png" ForegroundFile="" Color="" />
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 

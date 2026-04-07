@@ -14,12 +14,38 @@
             <Button
                 Text="Public" 
                 Clicked="PublicAccClicked"
-                HorizontalOptions="Fill" FontSize="Medium" />
+                HorizontalOptions="Fill" FontSize="Medium">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Pink" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
 
             <Button
                 Text="Private" 
                 Clicked="PrivateAccClicked"
-                HorizontalOptions="Fill" FontSize="Medium" />
+                HorizontalOptions="Fill" FontSize="Medium">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Pink" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
         </VerticalStackLayout>
     </ScrollView>
 

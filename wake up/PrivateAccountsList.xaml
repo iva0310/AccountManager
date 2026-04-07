@@ -7,11 +7,47 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="10">
-            <Label Text=""/>
-            <Label Text="List OF Private Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
+            <Label/>
+            <Label Text="List Of Private Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
 
-            <Button x:Name="EnterPassword" Text="Enter Password" Clicked="EnterPrivate" HorizontalOptions="Center" FontSize="Medium"/>
-            <Button x:Name="ForgotPassword" Text="Reset Password" Clicked="ForgotPass" HorizontalOptions="Center" FontSize="Medium"/>
+            <Button 
+                x:Name="EnterPassword"
+                Text="Enter Password"
+                Clicked="EnterPrivate"
+                HorizontalOptions="Center"
+                FontSize="Medium">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Pink" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+            <Button 
+                x:Name="ForgotPassword"
+                Text="Reset Password"
+                Clicked="ForgotPass"
+                HorizontalOptions="Center"
+                FontSize="Medium">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Pink" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
 
         </VerticalStackLayout>
     </ScrollView>

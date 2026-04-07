@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:wake_up"
     Title="Account Manager"
     TitleColor="White"
-    ForegroundColor="DarkSlateGrey" 
+    ForegroundColor="PaleVioletRed" 
     BackgroundColor="Black">
     <ShellContent
         Title=""

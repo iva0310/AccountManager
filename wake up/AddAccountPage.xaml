@@ -16,14 +16,40 @@
 
             <Button
                 Clicked="AddPublicAcc"
-                Text="Add public" HorizontalOptions="Start" />
+                Text="Add public" HorizontalOptions="Start">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Pink" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
 
             <Label
-                Text="Private Account" FontSize="Medium" HorizontalOptions="Start" /> 
+                Text="Private Account" FontSize="Medium" HorizontalOptions="Start" />
 
             <Button
                 Clicked="AddPrivateAcc"
-                Text="Add private" HorizontalOptions="Start" />
+                Text="Add private" HorizontalOptions="Start">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Pink" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
             <Entry
                 x:Name="EnterName"
                 Text=""
