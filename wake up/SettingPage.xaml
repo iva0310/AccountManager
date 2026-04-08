@@ -12,12 +12,13 @@
             <Label
                 Text="> Main Page Image"
                 HorizontalOptions="Start"
+                FontSize="18"
                 />
             <Button
                 Text="Change"
                 HorizontalOptions="Start"
 				Clicked="ChangeClicked"
-                FontSize="14">
+                FontSize="15">
                 <VisualStateManager.VisualStateGroups>
                 <VisualStateGroupList>
                     <VisualStateGroup x:Name="CommonStates">

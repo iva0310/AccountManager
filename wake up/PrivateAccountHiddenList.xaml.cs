@@ -5,7 +5,7 @@
         public PrivateAccountsHiddenList()
         {
             InitializeComponent();
-            AccountList.ItemsSource = DataStorage.privateAllAccounts;
+            AccountList.ItemsSource = DataStorage.PrivateAllAccounts;
         }
         private async void OnDeleteClicked(object sender, EventArgs e)
         {
@@ -17,8 +17,25 @@
 
                 if (answer)
                 {
-                    DataStorage.privateAllAccounts.Remove(accountToDelete);
+                    DataStorage.PrivateAllAccounts.Remove(accountToDelete);
+                    DataStorage.SaveData();
                 }
+            }
+        }
+        private async void OnCopyClicked(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var item = button.BindingContext as InputManager;
+
+            if (item != null)
+            {
+                string textToCopy = item.Email;
+                await Clipboard.Default.SetTextAsync(textToCopy);
+            }
+            if (item != null)
+            {
+                string textToCopy = item.Password;
+                await Clipboard.Default.SetTextAsync(textToCopy);
             }
         }
     }

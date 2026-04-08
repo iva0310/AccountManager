@@ -17,12 +17,13 @@
                 if (!string.IsNullOrWhiteSpace(userEmailInput) && !string.IsNullOrWhiteSpace(userPasswordInput) && !string.IsNullOrWhiteSpace(userNameInput))
                 {
                     await DisplayAlert("Account has been added to public list", $"Name: {userNameInput}\nAccount: {userEmailInput}\nPassword: {userPasswordInput}", "OK");
-                        DataStorage.publicAllAccounts.Add(new InputManager
+                        DataStorage.PublicAllAccounts.Add(new InputManager
                         {
                             Name = userNameInput,
                             Email = userEmailInput,
                             Password = userPasswordInput,
                         });
+                        DataStorage.SaveData();
                     EnterName.Text = "";
                     EnterEmail.Text = "@gmail.com / @outlook.com";
                     EnterPass.Text = "";
@@ -50,12 +51,13 @@
                 if (!string.IsNullOrWhiteSpace(userEmailInput) && !string.IsNullOrWhiteSpace(userPasswordInput) && !string.IsNullOrWhiteSpace(userNameInput))
                 {
                     await DisplayAlert("Account has been added to private list", $"Name: {userNameInput}\nAccount: {userEmailInput}\nPassword: {userPasswordInput}", "OK");
-                    DataStorage.privateAllAccounts.Add(new InputManager
+                    DataStorage.PrivateAllAccounts.Add(new InputManager
                     {
                         Name = userNameInput,
                         Email = userEmailInput,
                         Password = userPasswordInput,
                     });
+                    DataStorage.SaveData();
                     EnterName.Text = "";
                     EnterEmail.Text = "@gmail.com / @outlook.com";
                     EnterPass.Text = "";

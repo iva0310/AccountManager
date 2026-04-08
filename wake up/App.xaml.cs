@@ -7,6 +7,7 @@
         {
             InitializeComponent();
             MainPage = new AppShell();
+            DataStorage.LoadData();
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

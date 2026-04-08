@@ -4,7 +4,7 @@
              x:Class="wake_up.PublicAccountsList">
 
     <ScrollView>
-        <StackLayout Padding="20">
+        <StackLayout Padding="20" >
             <Label Text="List Of Public Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
 
             <CollectionView x:Name="AccountList">
@@ -17,19 +17,48 @@
                                 <Label Text="{Binding Email}" FontSize="Small" TextColor="Gray" />
                                 <Label/>
                                 <Label Text="{Binding Password}" FontSize="Small" TextColor="Gray" />
-                                <Label Text=""/>
+                                <Label/>
                                 <Label/>
                             </StackLayout>
 
-                            <Button Text="Delete" 
+                            <Button Text="Copy"
+                                    Clicked="OnCopyClicked"
+                                    HeightRequest="30"
+                                    WidthRequest="70">
+                                <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroupList>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal" />
+                                        <VisualState x:Name="PointerOver">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundColor" Value="pink" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateGroupList>
+                            </VisualStateManager.VisualStateGroups>
+                                </Button>
+                                    <Button Text="D" 
                                     TextColor="White" 
                                     Clicked="OnDeleteClicked" 
                                     CommandParameter="{Binding .}" 
-                                    BackgroundColor="#736B6B" FontSize="Body" 
-                                    MaximumHeightRequest="50" MaximumWidthRequest="70"
-                                    MinimumHeightRequest="50" MinimumWidthRequest="70">
-
+                                    BackgroundColor="PaleVioletRed" FontSize="Body" 
+                                    HeightRequest="30"
+                                    WidthRequest="30" Margin="10,0,0,0">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroupList>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="Normal" />
+                                            <VisualState x:Name="PointerOver">
+                                                <VisualState.Setters>
+                                                    <Setter Property="BackgroundColor" Value="red" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateGroupList>
+                                </VisualStateManager.VisualStateGroups>
                             </Button>
+
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

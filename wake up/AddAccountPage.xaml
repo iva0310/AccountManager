@@ -16,7 +16,7 @@
 
             <Button
                 Clicked="AddPublicAcc"
-                Text="Add public" HorizontalOptions="Start">
+                Text="Add to public" HorizontalOptions="Start">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
@@ -36,7 +36,7 @@
 
             <Button
                 Clicked="AddPrivateAcc"
-                Text="Add private" HorizontalOptions="Start">
+                Text="Add to private" HorizontalOptions="Start">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">

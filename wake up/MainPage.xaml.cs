@@ -7,16 +7,10 @@
         {
             
             InitializeComponent();
-            string savedPath = Preferences.Default.Get("SavedImagePath", "dotnet_bot.png");
 
-            if (File.Exists(savedPath))
-            {
-                MainPageImage.Source = ImageSource.FromFile(savedPath);
-            }
-            else
-            {
-                MainPageImage.Source = savedPath;
-            }
+            var savedPath = Preferences.Default.Get("SavedImagePath", "dotnet_bot.png");
+
+            MainPageImage.Source = File.Exists(savedPath) ? ImageSource.FromFile(savedPath) : savedPath;
             MessagingCenter.Subscribe<SettingPage, string>(this, "UpdateImage", (sender, filePath) =>
             {
                 MainThread.BeginInvokeOnMainThread(() =>
@@ -25,6 +19,7 @@
                 });
             });
         }
+
 
 
         private async void AddAccountButtonClicked(object sender, EventArgs e)
