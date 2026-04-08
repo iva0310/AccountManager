@@ -13,10 +13,10 @@
             <Style TargetType="Button">
                 <Setter Property="BackgroundColor" Value="PaleVioletRed" />
                 <Setter Property="TextColor" Value="White" />
-                <Setter Property="FontFamily" Value="Pixelletters" />
+                <Setter Property="FontFamily" Value="ArchivoBlack" />
                 <Setter Property="BorderColor" Value="White" />
                 <Setter Property="BorderWidth" Value="1.5" />
-</Style>
+            </Style>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

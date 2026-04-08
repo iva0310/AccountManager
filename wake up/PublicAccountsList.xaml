@@ -4,8 +4,11 @@
              x:Class="wake_up.PublicAccountsList">
 
     <ScrollView>
-        <StackLayout Padding="20" >
-            <Label Text="✧ Refresh the page to display the information you edited." FontSize="11.5" HorizontalOptions="Center"/>
+        <StackLayout Padding="20">
+            <Label Text="✧ Refresh the page to display the information you edited." 
+                   FontSize="11.5" 
+                   HorizontalOptions="Center"
+                   FontFamily="ArchivoBlack"/>
             <Label></Label>
             <Label Text="Public Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
 
@@ -41,10 +44,10 @@
                                 </VisualStateManager.VisualStateGroups>
                             </Button>
                                 <Button 
-                                    x:Name="copy"
                                     Text="Copy"
+                                    FontFamily="ArchivoBlack"
                                     Clicked="OnCopyClicked"
-                                    FontSize="15"
+                                    FontSize="12"
                                     HeightRequest="30"
                                     WidthRequest="60"
                                     Margin="10,0,0,0">

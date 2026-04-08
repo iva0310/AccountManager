@@ -43,7 +43,7 @@
             <Button
                 Text="Account Manager"
                 Clicked="PublicOrPrivateClicked"
-                HorizontalOptions="Center" FontSize="Medium">
+                HorizontalOptions="Center" FontSize="20">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroupList>
                     <VisualStateGroup x:Name="CommonStates">
