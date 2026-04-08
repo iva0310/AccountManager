@@ -5,7 +5,9 @@
 
     <ScrollView>
         <StackLayout Padding="20" >
-            <Label Text="List Of Public Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
+            <Label Text="✧ Refresh the page to display the information you edited." FontSize="11.5" HorizontalOptions="Center"/>
+            <Label></Label>
+            <Label Text="Public Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
 
             <CollectionView x:Name="AccountList">
                 <CollectionView.ItemTemplate>
@@ -20,11 +22,32 @@
                                 <Label/>
                                 <Label/>
                             </StackLayout>
-
-                            <Button Text="Copy"
-                                    Clicked="OnCopyClicked"
+                            <Button Text="✎"
+                                    CommandParameter="{Binding .}"
+                                    Clicked="OnEditClicked"
                                     HeightRequest="30"
-                                    WidthRequest="70">
+                                    WidthRequest="40">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroupList>
+                                        <VisualStateGroup x:Name="CommonStates">
+                                            <VisualState x:Name="Normal" />
+                                            <VisualState x:Name="PointerOver">
+                                                <VisualState.Setters>
+                                                    <Setter Property="BackgroundColor" Value="lightgreen" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateGroupList>
+                                </VisualStateManager.VisualStateGroups>
+                            </Button>
+                                <Button 
+                                    x:Name="copy"
+                                    Text="Copy"
+                                    Clicked="OnCopyClicked"
+                                    FontSize="15"
+                                    HeightRequest="30"
+                                    WidthRequest="60"
+                                    Margin="10,0,0,0">
                                 <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroupList>
                                     <VisualStateGroup x:Name="CommonStates">
@@ -38,13 +61,13 @@
                                 </VisualStateGroupList>
                             </VisualStateManager.VisualStateGroups>
                                 </Button>
-                                    <Button Text="D" 
+                            <Button Text="✘" 
                                     TextColor="White" 
                                     Clicked="OnDeleteClicked" 
-                                    CommandParameter="{Binding .}" 
-                                    BackgroundColor="PaleVioletRed" FontSize="Body" 
+                                    CommandParameter="{Binding .}"
                                     HeightRequest="30"
-                                    WidthRequest="30" Margin="10,0,0,0">
+                                    WidthRequest="40"
+                                    Margin="10,0,0,0">
                                 <VisualStateManager.VisualStateGroups>
                                     <VisualStateGroupList>
                                         <VisualStateGroup x:Name="CommonStates">
@@ -58,7 +81,6 @@
                                     </VisualStateGroupList>
                                 </VisualStateManager.VisualStateGroups>
                             </Button>
-
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

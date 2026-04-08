@@ -26,17 +26,41 @@
         {
             var button = (Button)sender;
             var item = button.BindingContext as InputManager;
+            var combinedText = $"{item?.Email}\n{item?.Password}";
+            await Clipboard.SetTextAsync(combinedText);
+            var normalText = button.Text;
+            button.Text = "✓";
+            await Task.Delay(3000);
+            button.Text = normalText;
+        }
+        private async void OnEditClicked(object sender, EventArgs e)
+        {
+            var element = sender as Element;
 
-            if (item != null)
+            if (element?.BindingContext is not InputManager item) return;
+
+            var newName = await DisplayPromptAsync("", "Edit Name:", "Save", "Cancel", initialValue: item.Name);
+            if (newName == null) return; // Cancel
+
+            var newEmail = await DisplayPromptAsync("", "Edit Email:", "Save", "Cancel", initialValue: item.Email);
+            if (newEmail == null) return;
+
+            var newPassword = await DisplayPromptAsync("", "Edit Password:", "Save", "Cancel", initialValue: item.Password);
+            if (newPassword == null) return;
+
+            item.Name = newName;
+            item.Email = newEmail;
+            item.Password = newPassword;
+
+            /*
+            int index = DataStorage.PrivateAllAccounts.IndexOf(item);
+            if (index != -1)
             {
-                string textToCopy = item.Email;
-                await Clipboard.Default.SetTextAsync(textToCopy);
+                DataStorage.PrivateAllAccounts.RemoveAt(index);
+                DataStorage.PrivateAllAccounts.Insert(index, item);
             }
-            if (item != null)
-            {
-                string textToCopy = item.Password;
-                await Clipboard.Default.SetTextAsync(textToCopy);
-            }
+            */
+            DataStorage.SaveData();
         }
     }
 }

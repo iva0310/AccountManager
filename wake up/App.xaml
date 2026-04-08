@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <Style TargetType="Label">
                 <Setter Property="FontFamily" Value="Pixelletters" />
-                <Setter Property="TextColor" Value="White" />
+                <Setter Property="TextColor" Value="White"  />
             </Style>
 
             <Style TargetType="Button">
@@ -15,8 +15,8 @@
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontFamily" Value="Pixelletters" />
                 <Setter Property="BorderColor" Value="White" />
-                
-            </Style>
+                <Setter Property="BorderWidth" Value="1.5" />
+</Style>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

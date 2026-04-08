@@ -8,8 +8,7 @@
             Padding="30,0"
             Spacing="10">
             <Label/>
-            <Label Text="List Of Private Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
-
+            <Label/>
             <Button 
                 x:Name="EnterPassword"
                 Text="Enter Password"
@@ -30,7 +29,7 @@
                 </VisualStateManager.VisualStateGroups>
             </Button>
             <Button 
-                x:Name="ForgotPassword"
+                x:Name="ResetPassword"
                 Text="Reset Password"
                 Clicked="ForgotPass"
                 HorizontalOptions="Center"

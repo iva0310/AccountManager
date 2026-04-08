@@ -13,6 +13,8 @@ namespace wake_up
                 {
                     fonts.AddFont("Pixelletters.ttf", "Pixelletters");
                     fonts.AddFont("Pixellettersfull.ttf", "Pixellettersfull");
+                    fonts.AddFont("ArchivoBlack.ttf", "ArchivoBlack");
+                    
                 });
 
 #if DEBUG

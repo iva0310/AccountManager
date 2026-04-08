@@ -16,21 +16,21 @@
 
                 if (!string.IsNullOrWhiteSpace(userEmailInput) && !string.IsNullOrWhiteSpace(userPasswordInput) && !string.IsNullOrWhiteSpace(userNameInput))
                 {
-                    await DisplayAlert("Account has been added to public list", $"Name: {userNameInput}\nAccount: {userEmailInput}\nPassword: {userPasswordInput}", "OK");
-                        DataStorage.PublicAllAccounts.Add(new InputManager
-                        {
-                            Name = userNameInput,
-                            Email = userEmailInput,
-                            Password = userPasswordInput,
-                        });
-                        DataStorage.SaveData();
+                    await DisplayAlert("The Account has been added to the public list", $"Name: {userNameInput}\nAccount: {userEmailInput}\nPassword: {userPasswordInput}", "OK");
+                    DataStorage.PublicAllAccounts.Add(new InputManager
+                    {
+                        Name = userNameInput,
+                        Email = userEmailInput,
+                        Password = userPasswordInput,
+                    });
+                    DataStorage.SaveData();
                     EnterName.Text = "";
                     EnterEmail.Text = "@gmail.com / @outlook.com";
                     EnterPass.Text = "";
                 }
                 else
                 {
-                    await DisplayAlert("Error", "You didn't enter right word.", "OK");
+                    await DisplayAlert("Error", "You didn't enter correct word.", "OK");
                 }
             }
             catch (Exception ex)
@@ -50,7 +50,7 @@
 
                 if (!string.IsNullOrWhiteSpace(userEmailInput) && !string.IsNullOrWhiteSpace(userPasswordInput) && !string.IsNullOrWhiteSpace(userNameInput))
                 {
-                    await DisplayAlert("Account has been added to private list", $"Name: {userNameInput}\nAccount: {userEmailInput}\nPassword: {userPasswordInput}", "OK");
+                    await DisplayAlert("The Account has been added to the private list", $"Name: {userNameInput}\nAccount: {userEmailInput}\nPassword: {userPasswordInput}", "OK");
                     DataStorage.PrivateAllAccounts.Add(new InputManager
                     {
                         Name = userNameInput,
@@ -64,7 +64,7 @@
                 }
                 else
                 {
-                    await DisplayAlert("Error", "You didn't enter right word.", "OK");
+                    await DisplayAlert("Error", "You didn't enter correct word.", "OK");
                 }
             }
             catch (Exception ex)
