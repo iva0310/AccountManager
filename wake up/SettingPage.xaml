@@ -4,35 +4,39 @@
              x:Class="wake_up.SettingPage">
 
     <ScrollView>
-        <VerticalStackLayout
+        <Grid>
+            <Image x:Name="Empty"
+                   Source="b1.jpg"
+                   Opacity="0.7"
+                   Aspect="Fill"/>
+            <VerticalStackLayout
             Padding="30,0"
             Spacing="10">
-            <Label/>
-            <Label/>
-            <Label
+                <Label/>
+                <Label/>
+                <Label
                 Text="> Main Page Image"
                 HorizontalOptions="Start"
-                FontSize="18"
-                />
-            <Button
+                FontSize="18"/>
+                <Button
                 Text="Change"
                 HorizontalOptions="Start"
 				Clicked="ChangeClicked"
                 FontSize="15">
-                <VisualStateManager.VisualStateGroups>
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="Normal" />
-                        <VisualState x:Name="PointerOver">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="Pink" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </VisualStateManager.VisualStateGroups>
-            </Button>
-
-        </VerticalStackLayout>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Pink" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+            </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 </ContentPage>

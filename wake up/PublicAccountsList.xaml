@@ -4,45 +4,49 @@
              x:Class="wake_up.PublicAccountsList">
 
     <ScrollView>
-        <StackLayout Padding="20">
-            <Label Text="✧ Refresh the page to display the information you edited." 
+        <Grid>
+            <Image x:Name="Empty"
+                   Source="b4.jpg"
+                   Opacity="0.8"
+                   Aspect="Fill"/>
+            <StackLayout Padding="20">
+                <Label Text="✧ Refresh the page to display the account you edited." 
                    FontSize="11.5" 
                    HorizontalOptions="Center"
                    FontFamily="ArchivoBlack"/>
-            <Label></Label>
-            <Label Text="Public Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
-
-            <CollectionView x:Name="AccountList">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout Orientation="Horizontal">
-                            <StackLayout HorizontalOptions="StartAndExpand">
-                                <Label Text="{Binding Name}" FontAttributes="Bold" />
-                                <Label/>
-                                <Label Text="{Binding Email}" FontSize="Small" TextColor="Gray" />
-                                <Label/>
-                                <Label Text="{Binding Password}" FontSize="Small" TextColor="Gray" />
-                                <Label/>
-                                <Label/>
-                            </StackLayout>
-                            <Button Text="✎"
+                <Label></Label>
+                <Label Text="Public Accounts" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
+                <CollectionView x:Name="AccountList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                    <Label/>
+                                    <Label Text="{Binding Email}" FontSize="Small" TextColor="Gray" />
+                                    <Label/>
+                                    <Label Text="{Binding Password}" FontSize="Small" TextColor="Gray" />
+                                    <Label/>
+                                    <Label/>
+                                </StackLayout>
+                                <Button Text="✎"
                                     CommandParameter="{Binding .}"
                                     Clicked="OnEditClicked"
                                     HeightRequest="30"
                                     WidthRequest="40">
-                                <VisualStateManager.VisualStateGroups>
-                                    <VisualStateGroupList>
-                                        <VisualStateGroup x:Name="CommonStates">
-                                            <VisualState x:Name="Normal" />
-                                            <VisualState x:Name="PointerOver">
-                                                <VisualState.Setters>
-                                                    <Setter Property="BackgroundColor" Value="lightgreen" />
-                                                </VisualState.Setters>
-                                            </VisualState>
-                                        </VisualStateGroup>
-                                    </VisualStateGroupList>
-                                </VisualStateManager.VisualStateGroups>
-                            </Button>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroupList>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal" />
+                                                <VisualState x:Name="PointerOver">
+                                                    <VisualState.Setters>
+                                                        <Setter Property="BackgroundColor" Value="lightgreen" />
+                                                    </VisualState.Setters>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateGroupList>
+                                    </VisualStateManager.VisualStateGroups>
+                                </Button>
                                 <Button 
                                     Text="Copy"
                                     FontFamily="ArchivoBlack"
@@ -51,44 +55,44 @@
                                     HeightRequest="30"
                                     WidthRequest="60"
                                     Margin="10,0,0,0">
-                                <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroupList>
-                                    <VisualStateGroup x:Name="CommonStates">
-                                        <VisualState x:Name="Normal" />
-                                        <VisualState x:Name="PointerOver">
-                                            <VisualState.Setters>
-                                                <Setter Property="BackgroundColor" Value="pink" />
-                                            </VisualState.Setters>
-                                        </VisualState>
-                                    </VisualStateGroup>
-                                </VisualStateGroupList>
-                            </VisualStateManager.VisualStateGroups>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroupList>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal" />
+                                                <VisualState x:Name="PointerOver">
+                                                    <VisualState.Setters>
+                                                        <Setter Property="BackgroundColor" Value="pink" />
+                                                    </VisualState.Setters>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateGroupList>
+                                    </VisualStateManager.VisualStateGroups>
                                 </Button>
-                            <Button Text="✘" 
+                                <Button Text="✘" 
                                     TextColor="White" 
                                     Clicked="OnDeleteClicked" 
                                     CommandParameter="{Binding .}"
                                     HeightRequest="30"
                                     WidthRequest="40"
                                     Margin="10,0,0,0">
-                                <VisualStateManager.VisualStateGroups>
-                                    <VisualStateGroupList>
-                                        <VisualStateGroup x:Name="CommonStates">
-                                            <VisualState x:Name="Normal" />
-                                            <VisualState x:Name="PointerOver">
-                                                <VisualState.Setters>
-                                                    <Setter Property="BackgroundColor" Value="red" />
-                                                </VisualState.Setters>
-                                            </VisualState>
-                                        </VisualStateGroup>
-                                    </VisualStateGroupList>
-                                </VisualStateManager.VisualStateGroups>
-                            </Button>
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroupList>
+                                            <VisualStateGroup x:Name="CommonStates">
+                                                <VisualState x:Name="Normal" />
+                                                <VisualState x:Name="PointerOver">
+                                                    <VisualState.Setters>
+                                                        <Setter Property="BackgroundColor" Value="red" />
+                                                    </VisualState.Setters>
+                                                </VisualState>
+                                            </VisualStateGroup>
+                                        </VisualStateGroupList>
+                                    </VisualStateManager.VisualStateGroups>
+                                </Button>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
     </ScrollView>
-
 </ContentPage>

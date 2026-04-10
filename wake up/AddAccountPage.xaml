@@ -4,66 +4,66 @@
              x:Class="wake_up.AddAccountPage">
 
     <ScrollView>
-        <VerticalStackLayout
+        <Grid>
+            <Image x:Name="Empty"
+                   Source="b1.jpg"
+                   Opacity="0.7"
+                   Aspect="Fill"/>
+            <VerticalStackLayout
             Padding="30,0"
             Spacing="10" HorizontalOptions="Fill">
-            <Label
-            Text=""
-            />
-
-            <Label
-                Text="Public Account" FontSize="Medium" HorizontalOptions="Start" />
-
-            <Button
+                <Label/>
+                <Label/>
+                <Grid>
+                    <Button
                 Clicked="AddPublicAcc"
                 Text="Add to public" HorizontalOptions="Start">
-                <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal" />
-                            <VisualState x:Name="PointerOver">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="Pink" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </VisualStateManager.VisualStateGroups>
-            </Button>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroupList>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="PointerOver">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Pink" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </VisualStateManager.VisualStateGroups>
+                    </Button>
 
-            <Label
-                Text="Private Account" FontSize="Medium" HorizontalOptions="Start" />
-
-            <Button
+                    <Button
                 Clicked="AddPrivateAcc"
-                Text="Add to private" HorizontalOptions="Start">
-                <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal" />
-                            <VisualState x:Name="PointerOver">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="Pink" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </VisualStateManager.VisualStateGroups>
-            </Button>
-            <Entry
+                Text="Add to private" HorizontalOptions="End">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroupList>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="PointerOver">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="Pink" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </VisualStateManager.VisualStateGroups>
+                    </Button>
+                </Grid>
+                <Label/>
+                <Label/>
+                <Entry
                 x:Name="EnterName"
                 Text=""
-                HorizontalOptions="CenterAndExpand" Placeholder="Enter your Name"/>
-            <Entry
+                Placeholder="Enter your Name"/>
+                <Entry
                 x:Name="EnterEmail"
                 Text="@gmail.com / @outlook.com"
-                HorizontalOptions="CenterAndExpand" Placeholder="Enter your mail"/>
-            <Entry
+                Placeholder="Enter your mail"/>
+                <Entry
                 x:Name="EnterPass"
                 Text=""
-                HorizontalOptions="CenterAndExpand" Placeholder="Enter your password"/>
-
-        </VerticalStackLayout>
+                Placeholder="Enter your password"/>
+            </VerticalStackLayout>
+        </Grid>
     </ScrollView>
-
 </ContentPage>

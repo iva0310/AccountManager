@@ -4,51 +4,55 @@
              x:Class="wake_up.PrivateAccountsList">
 
     <ScrollView>
-        <VerticalStackLayout
+        <Grid>
+            <Image x:Name="Empty"
+                   Source="b1.jpg"
+                   Opacity="0.7"
+                   Aspect="Fill"/>
+            <VerticalStackLayout
             Padding="30,0"
             Spacing="10">
-            <Label/>
-            <Label/>
-            <Button 
+                <Label/>
+                <Label/>
+                <Button 
                 x:Name="EnterPassword"
                 Text="Enter Password"
                 Clicked="EnterPrivate"
                 HorizontalOptions="Center"
                 FontSize="Medium">
-                <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal" />
-                            <VisualState x:Name="PointerOver">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="Pink" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </VisualStateManager.VisualStateGroups>
-            </Button>
-            <Button 
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Pink" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+                <Button 
                 x:Name="ResetPassword"
                 Text="Reset Password"
                 Clicked="ForgotPass"
                 HorizontalOptions="Center"
                 FontSize="Medium">
-                <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroupList>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Normal" />
-                            <VisualState x:Name="PointerOver">
-                                <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="Pink" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateGroupList>
-                </VisualStateManager.VisualStateGroups>
-            </Button>
-
-        </VerticalStackLayout>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Pink" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+            </VerticalStackLayout>
+        </Grid>
     </ScrollView>
-
 </ContentPage>

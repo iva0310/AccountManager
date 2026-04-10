@@ -4,61 +4,62 @@
              x:Class="wake_up.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
+        <Grid>
+            <Image x:Name="Empty"
+                   Source="b1.jpg"
+                   Opacity="0.7"
+                   Aspect="Fill"/>
+            <VerticalStackLayout
             Padding="30,0"
             Spacing="10">
-            <Label/>
-            <Label/>
-            <Image
+                <Label/>
+                <Label/>
+                <Image
                 x:Name="MainPageImage"
                 Source="kawi.gif"
                 IsAnimationPlaying="True"
                 HeightRequest="185"
                 Aspect="AspectFit"/>
-
-            <Label
+                <Label
                 Text="Account Manager"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-
-            <Button
+                    HorizontalOptions="Center"
+                    FontSize="30"/>
+                <Button
                 Text="Add an Account" 
                 Clicked="AddAccountButtonClicked"
                 HorizontalOptions="Center">
-
-                <VisualStateManager.VisualStateGroups>
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="Normal" />
-                        <VisualState x:Name="PointerOver">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="Pink" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </VisualStateManager.VisualStateGroups>
-            </Button>
-
-            <Button
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Pink" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+                <Button
                 Text="Account Manager"
                 Clicked="PublicOrPrivateClicked"
-                HorizontalOptions="Center" FontSize="20">
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CommonStates">
-                        <VisualState x:Name="Normal" />
-                        <VisualState x:Name="PointerOver">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="Pink" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </VisualStateManager.VisualStateGroups>
-            </Button>
-            <Grid>
-                <ImageButton
+                HorizontalOptions="Center" FontSize="16">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroupList>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="Pink" />
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateGroupList>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+                <Grid>
+                    <ImageButton
                     Source="setting.jpg" 
                     WidthRequest="10"
                     HeightRequest="10"
@@ -66,14 +67,9 @@
                     HorizontalOptions="End"
                     VerticalOptions="End" BackgroundColor="#00000000"
                     ToolTipProperties.Text="Setting"
-                    Clicked="SettingClicked"
-                />
-            </Grid>
-
-
-
-
-        </VerticalStackLayout>
+                    Clicked="SettingClicked"/>
+                </Grid>
+            </VerticalStackLayout>
+        </Grid>
     </ScrollView>
-
 </ContentPage>

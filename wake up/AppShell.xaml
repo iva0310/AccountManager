@@ -8,6 +8,7 @@
     TitleColor="White"
     ForegroundColor="PaleVioletRed" 
     BackgroundColor="Black">
+    
     <ShellContent
         Title=""
         ContentTemplate="{DataTemplate local:MainPage}"
